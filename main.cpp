@@ -1,22 +1,28 @@
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
 int main()
 {
+    const double pi=3.14159265359;
+    double a,b;
+
+    cout << "Unesite prvu katetu:";
+    cin >> a;
+    cout << "Unesite drugu katetu:";
+    cin >> b;
 
 
-    string a[] = {"Tesla:", "BMW:", "Mercedes:", "Audi:", "Ferrari:"};
-    string b[] = {"Model 3", "Model Y", "Model S", "M4", "X5", "M5", "G - class", "AMG GT coupe", "CLE cabriolet", "A5", "A6", "Q7", "Portofino M", "F80", "812 GTS"};
+    auto c=sqrt(a*a+b*b);
+    double o=a+b+c;
+    double p=(a*b)/2;
+    double ns=asin(a/c)*(180/pi);
 
-    for(int i=0;i<5;i++) {
-            cout << a[i] << " " << b[i] << endl;
-
-            for(int j=0;j<i;j++) {
-                cout << a[j] << " " << b[j] << endl;
-            }
-
-    }
+    cout << "Hipotenuza je: " << c << endl;
+    cout << "Opseg trokuta je: " << o << endl;
+    cout << "Povrsina trokuta je: " << p << endl;
+    cout << "Kut nasuprot kateti a je: " << ns << " stupnjeva" << endl;
 
 
     return 0;
